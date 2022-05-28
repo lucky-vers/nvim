@@ -20,7 +20,7 @@ vim.g.maplocalleader = " "
 -- NORMAL --
 
 	-- Insert keymaps
-	map("n", "<leader>N", "o<ESC>0C<TAB>map(\"n\", \"<++>\", \"<++>\", opts)<ESC>0", opts)	-- Normal Mode Keymap
+ 	map("n", "<leader>N", "o<ESC>0C<TAB>map(\"n\", \"<++>\", \"<++>\", opts)<ESC>0", opts)	-- Normal Mode Keymap
 	map("n", "<leader>I", "o<ESC>0C<TAB>map(\"i\", \"<++>\", \"<++>\", opts)<ESC>0", opts)	-- Insert Mode Keymap
 	map("n", "<leader>V", "o<ESC>0C<TAB>map(\"v\", \"<++>\", \"<++>\", opts)<ESC>0", opts)	-- Visual Mode Keymap
 	map("n", "<leader>X", "o<ESC>0C<TAB>map(\"x\", \"<++>\", \"<++>\", opts)<ESC>0", opts)	-- Visual Block Mode Keymap
@@ -34,21 +34,21 @@ vim.g.maplocalleader = " "
 	map("n", "<C-l>", "<C-w>l", opts) -- Move right
 
 	-- Resize with arrows
-	map("n", "<C-Up>", ":resize +2<CR>", opts)             -- Vertically resize up by 2
-	map("n", "<C-Down>", ":resize -2<CR>", opts)           -- Vertically resize down by 2
-	map("n", "<C-Left>", ":vertical resize -2<CR>", opts)  -- Vertically resize left by 2
+ 	map("n", "<C-Up>",    ":resize +2<CR>",          opts) -- Vertically resize up by 2
+	map("n", "<C-Down>",  ":resize -2<CR>",          opts) -- Vertically resize down by 2
+	map("n", "<C-Left>",  ":vertical resize -2<CR>", opts) -- Vertically resize left by 2
 	map("n", "<C-Right>", ":vertical resize +2<CR>", opts) -- Vertically resize right by 2
 
 	-- Navigate buffers
-	map("n", "<S-l>", ":bnext<CR>", opts)     -- Go to next buffer
+	map("n", "<S-l>", ":bnext<CR>",     opts) -- Go to next buffer
 	map("n", "<S-h>", ":bprevious<CR>", opts) -- Go to previous buffer
 
 	-- Enter visual block mode
 	map("n", "<leader>v", "<C-v>", opts)
 
 	-- Save the file
-	map("n", "s",  ":%s/\\s\\+$//e<CR>:w<CR>", opts)     -- Save
-	map("n", "S",  ":%s/\\s\\+$//e<CR>ZZ", opts)         -- Save & Quit
+	map("n",  "s", ":%s/\\s\\+$//e<CR>:w<CR>",  opts)    -- Save
+	map("n",  "S", ":%s/\\s\\+$//e<CR>ZZ",      opts)    -- Save & Quit
 	map("n", "QQ", ":%s/\\s\\+$//e<CR>:q!<CR>", opts)    -- Quit without saving
 
 	-- Go to line extremes
@@ -70,9 +70,6 @@ vim.g.maplocalleader = " "
 	-- Remove search highlight
   map("n", "<ESC><ESC>", "/<ESC>:noh<CR>", opts)
 
-	-- Press jj fast to enter
-	map("i", "jj", "<ESC>", opts)
-
 	-- Increment numbers
 	map("n", "=", "<C-a>", opts) -- Increase value
 	map("n", "-", "<C-x>", opts) -- Decrease value
@@ -82,6 +79,15 @@ vim.g.maplocalleader = " "
 
 	-- Add a space
 	map("n", ",", "i<space><ESC>", opts)
+
+	-- Scroll through truncated lines
+	map("n", "<A-J>", "gj", opts) -- Scroll down
+	map("n", "<A-K>", "gk", opts) -- Scroll up
+
+-- INSERT --
+
+	-- Press jj fast to enter
+	map("i", "jj", "<ESC>", opts)
 
 -- VISUAL --
 
@@ -96,8 +102,8 @@ vim.g.maplocalleader = " "
 -- VISUAL BLOCK --
 
 	-- Move text up and down
-	map("x", "J", ":move '>+1<CR>gv-gv", opts)     -- Move up with shift keys
-	map("x", "K", ":move '<-2<CR>gv-gv", opts)     -- Move down with shift keys
+	map("x", "J",     ":move '>+1<CR>gv-gv", opts) -- Move up with shift keys
+	map("x", "K",     ":move '<-2<CR>gv-gv", opts) -- Move down with shift keys
 	map("x", "<A-j>", ":move '>+1<CR>gv-gv", opts) -- Move up with alt keys
 	map("x", "<A-k>", ":move '<-2<CR>gv-gv", opts) -- Move down with alt keys
 
@@ -108,3 +114,5 @@ vim.g.maplocalleader = " "
 	map("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
 	map("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 	map("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
+
+vim.cmd "autocmd BufWritePre :%s/\\s\\+$//e"
