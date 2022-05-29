@@ -3,6 +3,5 @@ require "user.keymaps"
 require "user.plugins"
 require "user.colorschemes"
 require "user.cmp"
+require "user.treesitter"
 require "user.lsp"
-
-require"lspconfig".pyright.setup{}

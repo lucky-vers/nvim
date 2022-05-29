@@ -72,6 +72,13 @@ return packer.startup(function(use)
 	use "neovim/nvim-lspconfig"           -- LSP Enabler
 	use "williamboman/nvim-lsp-installer" -- LSP Installer
 
+	-- Treesitter
+	use {                                -- Main
+		"nvim-treesitter/nvim-treesitter", -- Treesitter
+		run = ":TSUpdate"                  -- package
+	}                                    -- --
+	use "p00f/nvim-ts-rainbow"           -- Rainbow parentheses
+
   if PACKER_BOOTSTRAP then
     require("packer").sync()
   end
