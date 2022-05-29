@@ -47,7 +47,6 @@ return packer.startup(function(use)
 	use "nvim-lua/plenary.nvim"            -- Useful lua functions used ny lots of plugins
 	use "vim-airline/vim-airline"          -- A simple status bar
 	use "vim-airline/vim-airline-themes"   -- Themes for the status bar
-	use "windwp/nvim-autopairs"            -- Autocomplete brackets and quotes
 
 	-- Color Schemes
 	use "morhetz/gruvbox"                  -- Gruvbox

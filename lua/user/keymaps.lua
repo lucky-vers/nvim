@@ -93,6 +93,13 @@ vim.g.maplocalleader = " "
 	-- Press jj fast to enter visual mode
 	map("i", "jj", "<ESC>", opts)
 
+	-- Autocomplete brackets and quotes
+	map("i", "\"", "\"\"<ESC>i", opts) -- Double quotes
+	map("i", "\'", "\'\'<ESC>i", opts) -- Single quotes
+	map("i", "(",  "()<ESC>i",  opts)	 -- Circle brackets
+	map("i", "[",  "[]<ESC>i",  opts)	 -- Square brackets
+	map("i", "{",  "{}<ESC>i",  opts)	 -- Curly brackets
+
 -- VISUAL --
 
 	-- Stay in indent mode
@@ -100,11 +107,11 @@ vim.g.maplocalleader = " "
 	map("v", ">", ">gv", opts) -- Indent right
 
 	-- Add brackets and quotes to selection
-	map("v", "\"\"", "\"-c\"\"<ESC>\"-P", opts)
-	map("v", "\'\'", "\"-c\'\'<ESC>\"-P", opts)
-	map("v", "{{",   "\"-c{}<ESC>\"-P",   opts)
-	map("v", "((",   "\"-c()<ESC>\"-P",   opts)
-	map("v", "[[",   "\"-c[]<ESC>\"-P",   opts)
+	map("v", "\"", "\"-c\"\"<ESC>\"-P", opts)
+	map("v", "\'", "\"-c\'\'<ESC>\"-P", opts)
+	map("v", "{",   "\"-c{}<ESC>\"-P",   opts)
+	map("v", "(",   "\"-c()<ESC>\"-P",   opts)
+	map("v", "[",   "\"-c[]<ESC>\"-P",   opts)
 
 	-- Move text up and down
 	map("v", "<A-j>", ":m .+1<CR>==", opts)
