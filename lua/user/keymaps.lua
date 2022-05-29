@@ -47,9 +47,9 @@ vim.g.maplocalleader = " "
 	map("n", "<leader>v", "<C-v>", opts)
 
 	-- Save the file
-	map("n",  "s", ":%s/\\s\\+$//e<CR>:w<CR>",  opts)    -- Save
-	map("n",  "S", ":%s/\\s\\+$//e<CR>ZZ",      opts)    -- Save & Quit
-	map("n", "QQ", ":%s/\\s\\+$//e<CR>:q!<CR>", opts)    -- Quit without saving
+	map("n",  "s", ":%s/\\s\\+$//e<CR>:w<CR>",  opts) -- Save
+	map("n",  "S", ":%s/\\s\\+$//e<CR>ZZ",      opts) -- Save & Quit
+	map("n", "QQ", ":%s/\\s\\+$//e<CR>:q!<CR>", opts) -- Quit without saving
 
 	-- Go to line extremes
 	map("n", "1", "0", opts) -- Go to begining
@@ -68,7 +68,7 @@ vim.g.maplocalleader = " "
 	map("n", "<leader>g", ":g/", opts)
 
 	-- Remove search highlight
-  map("n", "<ESC><ESC>", "/<ESC>:noh<CR>", opts)
+	map("n", "<ESC><ESC>", "/<ESC>:noh<CR>", opts)
 
 	-- Increment numbers
 	map("n", "=", "<C-a>", opts) -- Increase value
@@ -114,5 +114,3 @@ vim.g.maplocalleader = " "
 	map("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
 	map("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 	map("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
-
-vim.cmd "autocmd BufWritePre :%s/\\s\\+$//e"
