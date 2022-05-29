@@ -33,6 +33,10 @@ vim.g.maplocalleader = " "
 	map("n", "<C-k>", "<C-w>k", opts) -- Move up
 	map("n", "<C-l>", "<C-w>l", opts) -- Move right
 
+	-- Scroll pages
+	map("n", "<C-l>", "<C-u>", opts)
+	map("n", "<C-h>", "<C-d>", opts)
+
 	-- Resize with arrows
  	map("n", "<C-Up>",    ":resize +2<CR>",          opts) -- Vertically resize up by 2
 	map("n", "<C-Down>",  ":resize -2<CR>",          opts) -- Vertically resize down by 2
