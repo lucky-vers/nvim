@@ -84,9 +84,13 @@ vim.g.maplocalleader = " "
 	map("n", "<A-J>", "gj", opts) -- Scroll down
 	map("n", "<A-K>", "gk", opts) -- Scroll up
 
+	-- Move text up and down
+	map("n", "<A-j>", ":m .+1<CR>", opts)
+	map("n", "<A-k>", ":m .-2<CR>", opts)
+
 -- INSERT --
 
-	-- Press jj fast to enter
+	-- Press jj fast to enter visual mode
 	map("i", "jj", "<ESC>", opts)
 
 -- VISUAL --
@@ -95,17 +99,22 @@ vim.g.maplocalleader = " "
 	map("v", "<", "<gv", opts) -- Indent left
 	map("v", ">", ">gv", opts) -- Indent right
 
+	-- Add brackets and quotes to selection
+	map("v", "\"\"", "\"-c\"\"<ESC>\"-P", opts)
+	map("v", "\'\'", "\"-c\'\'<ESC>\"-P", opts)
+	map("v", "{{",   "\"-c{}<ESC>\"-P",   opts)
+	map("v", "((",   "\"-c()<ESC>\"-P",   opts)
+	map("v", "[[",   "\"-c[]<ESC>\"-P",   opts)
+
 	-- Move text up and down
-	map("n", "<A-j>", ":m .+1<CR>==", opts) -- Move up
-	map("n", "<a-k>", ":m .-2<cr>==", opts) -- Move down
+	map("v", "<A-j>", ":m .+1<CR>==", opts)
+	map("v", "<A-k>", ":m .-2<CR>==", opts)
 
 -- VISUAL BLOCK --
 
-	-- Move text up and down
-	map("x", "J",     ":move '>+1<CR>gv-gv", opts) -- Move up with shift keys
-	map("x", "K",     ":move '<-2<CR>gv-gv", opts) -- Move down with shift keys
-	map("x", "<A-j>", ":move '>+1<CR>gv-gv", opts) -- Move up with alt keys
-	map("x", "<A-k>", ":move '<-2<CR>gv-gv", opts) -- Move down with alt keys
+	-- Move text
+	map("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
+	map("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
 -- TERMINAL --
 

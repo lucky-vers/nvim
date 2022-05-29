@@ -41,11 +41,13 @@ packer.init {
 -- Install your plugins here
 return packer.startup(function(use)
 
+	-- General
 	use "wbthomason/packer.nvim"           -- Have packer manage itself
 	use "nvim-lua/popup.nvim"              -- An implementation of the Popup API from vim in Neovim
 	use "nvim-lua/plenary.nvim"            -- Useful lua functions used ny lots of plugins
 	use "vim-airline/vim-airline"          -- A simple status bar
 	use "vim-airline/vim-airline-themes"   -- Themes for the status bar
+	use "windwp/nvim-autopairs"            -- Autocomplete brackets and quotes
 
 	-- Color Schemes
 	use "morhetz/gruvbox"                  -- Gruvbox
@@ -83,4 +85,3 @@ return packer.startup(function(use)
 	  require("packer").sync()
 	end
 end)
-
