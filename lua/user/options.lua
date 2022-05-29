@@ -22,5 +22,6 @@ end
 
 -- Vim Script Options
 
-vim.cmd [[set iskeyword+=-]]                 -- Detect "-" as a word
-vim.cmd [[set iskeyword+=_]]                 -- Detect "_" as a word
+vim.cmd [[set iskeyword+=-]]												 -- Detect "-" as a word
+vim.cmd [[set iskeyword+=_]]												 -- Detect "_" as a word
+vim.cmd [[autocmd BufWritePre silent! :%s/\s\+$//e]] -- Remove trailing whitespace before saving
