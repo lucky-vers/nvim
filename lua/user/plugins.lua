@@ -47,6 +47,7 @@ return packer.startup(function(use)
 	use "nvim-lua/plenary.nvim"            -- Useful lua functions used ny lots of plugins
 	use "vim-airline/vim-airline"          -- A simple status bar
 	use "vim-airline/vim-airline-themes"   -- Themes for the status bar
+	use "psliwka/vim-smoothie"             -- Vim smooth scrolling
 
 	-- Color Schemes
 	use "morhetz/gruvbox"                  -- Gruvbox

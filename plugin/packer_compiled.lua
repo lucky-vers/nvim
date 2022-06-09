@@ -188,6 +188,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/verma/.local/share/nvim/site/pack/packer/start/vim-colorschemes",
     url = "https://github.com/flazz/vim-colorschemes"
+  },
+  ["vim-smoothie"] = {
+    loaded = true,
+    path = "/home/verma/.local/share/nvim/site/pack/packer/start/vim-smoothie",
+    url = "https://github.com/psliwka/vim-smoothie"
   }
 }
 
