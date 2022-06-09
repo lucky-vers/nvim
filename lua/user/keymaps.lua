@@ -56,8 +56,8 @@ vim.g.maplocalleader = " "
 	map("n", "QQ", ":%s/\\s\\+$//e<CR>:q!<CR>", opts) -- Quit without saving
 
 	-- Go to line extremes
-	map("n", "1", "0", opts) -- Go to begining
-	map("n", "2", "$", opts) -- Go to end
+	map("n", "<TAB>", "0", opts) -- Go to begining
+	map("n", "<S-TAB>", "$", opts) -- Go to end
 
 	-- Select all text
 	map("n", "<C-a>", "ggvG2", opts)
@@ -100,9 +100,9 @@ vim.g.maplocalleader = " "
 	-- Autocomplete brackets and quotes
 	map("i", "\"", "\"\"<ESC>i", opts) -- Double quotes
 	map("i", "\'", "\'\'<ESC>i", opts) -- Single quotes
-	map("i", "(",  "()<ESC>i",  opts)	 -- Circle brackets
-	map("i", "[",  "[]<ESC>i",  opts)	 -- Square brackets
-	map("i", "{",  "{}<ESC>i",  opts)	 -- Curly brackets
+	map("i", "(",  "()<ESC>i",   opts) -- Circle brackets
+	map("i", "[",  "[]<ESC>i",   opts) -- Square brackets
+	map("i", "{",  "{}<ESC>i",   opts) -- Curly brackets
 
 -- VISUAL --
 
@@ -113,17 +113,17 @@ vim.g.maplocalleader = " "
 	-- Add brackets and quotes to selection
 	map("v", "\"", "\"-c\"\"<ESC>\"-P", opts)
 	map("v", "\'", "\"-c\'\'<ESC>\"-P", opts)
-	map("v", "{",   "\"-c{}<ESC>\"-P",   opts)
-	map("v", "(",   "\"-c()<ESC>\"-P",   opts)
-	map("v", "[",   "\"-c[]<ESC>\"-P",   opts)
+	map("v", "{",   "\"-c{}<ESC>\"-P",  opts)
+	map("v", "(",   "\"-c()<ESC>\"-P",  opts)
+	map("v", "[",   "\"-c[]<ESC>\"-P",  opts)
 
 	-- Move text up and down
 	map("v", "<A-j>", ":m .+1<CR>==", opts)
 	map("v", "<A-k>", ":m .-2<CR>==", opts)
 
 	-- Go to line extremes
-	map("v", "1", "0", opts) -- Go to begining
-	map("v", "2", "$", opts) -- Go to end
+	map("v", "<TAB>", "0", opts) -- Go to begining
+	map("v", "<S-TAB>", "$", opts) -- Go to end
 
 -- VISUAL BLOCK --
 
