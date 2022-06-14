@@ -20,20 +20,20 @@ vim.g.maplocalleader = " "
 -- NORMAL --
 
   -- Better window navigation
-  map("n", "<C-h>", "<C-w>h", opts) -- Move left
-  map("n", "<C-j>", "<C-w>j", opts) -- Move down
-  map("n", "<C-k>", "<C-w>k", opts) -- Move up
-  map("n", "<C-l>", "<C-w>l", opts) -- Move right
+  map("n", "<A-h>", "<C-w>h", opts) -- Move left
+  map("n", "<A-j>", "<C-w>j", opts) -- Move down
+  map("n", "<A-k>", "<C-w>k", opts) -- Move up
+  map("n", "<A-l>", "<C-w>l", opts) -- Move right
 
   -- Scroll pages
   map("n", "<C-l>", "<C-u>", opts)
   map("n", "<C-h>", "<C-d>", opts)
 
   -- Resize with arrows
-   map("n", "<C-Up>",   ":resize +2<CR>",           opts) -- Vertically resize up by 2
-  map("n",  "<C-Down>",  ":resize -2<CR>",          opts) -- Vertically resize down by 2
-  map("n",  "<C-Left>",  ":vertical resize -2<CR>", opts) -- Vertically resize left by 2
-  map("n",  "<C-Right>", ":vertical resize +2<CR>", opts) -- Vertically resize right by 2
+  map("n", "<C-Up>",    ":resize +2<CR>",          opts) -- Vertically resize up by 2
+  map("n", "<C-Down>",  ":resize -2<CR>",          opts) -- Vertically resize down by 2
+  map("n", "<C-Left>",  ":vertical resize -2<CR>", opts) -- Vertically resize left by 2
+  map("n", "<C-Right>", ":vertical resize +2<CR>", opts) -- Vertically resize right by 2
 
   -- Navigate buffers
   map("n", "<S-l>", ":bnext<CR>",     opts) -- Go to next buffer
@@ -48,7 +48,7 @@ vim.g.maplocalleader = " "
   map("n", "QQ", ":%s/\\s\\+$//e<CR>:q!<CR>", opts) -- Quit without saving
 
   -- Go to line extremes
-  map("n", "<TAB>", "0", opts) -- Go to begining
+  map("n", "<TAB>", "0", opts)   -- Go to begining
   map("n", "<S-TAB>", "$", opts) -- Go to end
 
   -- Select all text
