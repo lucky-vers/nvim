@@ -96,6 +96,9 @@ vim.g.maplocalleader = " "
   map("i", "[",  "[]<ESC>i",   opts) -- Square brackets
   map("i", "{",  "{}<ESC>i",   opts) -- Curly brackets
 
+  map("n", "<leader>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
+  map("n", "<c-t>", "<cmd>Telescope live_grep<cr>", opts)
+
 -- VISUAL --
 
   -- Stay in indent mode

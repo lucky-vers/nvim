@@ -48,6 +48,7 @@ return packer.startup(function(use)
   use "vim-airline/vim-airline"          -- A simple status bar
   use "vim-airline/vim-airline-themes"   -- Themes for the status bar
   use "psliwka/vim-smoothie"             -- Vim smooth scrolling
+  use "nvim-telescope/telescope.nvim"    -- Telescope
 
   -- Color Schemes
   use "morhetz/gruvbox"                  -- Gruvbox
@@ -59,27 +60,27 @@ return packer.startup(function(use)
   use "flazz/vim-colorschemes"           -- A package of multiple color schemes
 
   -- CMP
-  use "hrsh7th/nvim-cmp"         -- Completion plugin
-  use "hrsh7th/cmp-buffer"       -- Buffer Completions
-  use "hrsh7th/cmp-path"         -- Path Completions
-  use "hrsh7th/cmp-cmdline"      -- Cmdline Completions
-  use "hrsh7th/cmp-nvim-lsp"     -- LSP Completion
-  use "saadparwaiz1/cmp_luasnip" -- Snippet Completions
+  use "hrsh7th/nvim-cmp"                 -- Completion plugin
+  use "hrsh7th/cmp-buffer"               -- Buffer Completions
+  use "hrsh7th/cmp-path"                 -- Path Completions
+  use "hrsh7th/cmp-cmdline"              -- Cmdline Completions
+  use "hrsh7th/cmp-nvim-lsp"             -- LSP Completion
+  use "saadparwaiz1/cmp_luasnip"         -- Snippet Completions
 
   -- Snippets
-  use "L3MON4D3/LuaSnip"             -- Snippet Engine
-  use "rafamadriz/friendly-snippets" -- A Bunch of Snippets to use
+  use "L3MON4D3/LuaSnip"                 -- Snippet Engine
+  use "rafamadriz/friendly-snippets"     -- A Bunch of Snippets to use
 
   -- LSP
-  use "neovim/nvim-lspconfig"           -- LSP Enabler
-  use "williamboman/nvim-lsp-installer" -- LSP Installer
+  use "neovim/nvim-lspconfig"            -- LSP Enabler
+  use "williamboman/nvim-lsp-installer"  -- LSP Installer
 
   -- Treesitter
-  use {                                -- Main
-  "nvim-treesitter/nvim-treesitter", -- Treesitter
-  run = ":TSUpdate"                  -- package
-  }                                    -- --
-  use "p00f/nvim-ts-rainbow"           -- Rainbow parentheses
+  use {                                  -- Main
+  "nvim-treesitter/nvim-treesitter",     -- Treesitter
+  run = ":TSUpdate"                      -- package
+  }                                      -- --
+  use "p00f/nvim-ts-rainbow"             -- Rainbow parentheses
 
   if PACKER_BOOTSTRAP then
     require("packer").sync()
