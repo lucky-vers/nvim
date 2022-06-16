@@ -60,9 +60,6 @@ vim.g.maplocalleader = " "
   -- Search and Replace
   map("n", "<leader>r", ":%s/", opts)
 
-  -- Global
-  map("n", "<leader>g", ":g/", opts)
-
   -- Increment numbers
   map("n", "=", "<C-a>", opts) -- Increase value
   map("n", "-", "<C-x>", opts) -- Decrease value
