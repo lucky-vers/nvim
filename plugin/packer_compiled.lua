@@ -194,6 +194,11 @@ _G.packer_plugins = {
     path = "/home/verma/.local/share/nvim/site/pack/packer/start/vim-colorschemes",
     url = "https://github.com/flazz/vim-colorschemes"
   },
+  ["vim-easy-align"] = {
+    loaded = true,
+    path = "/home/verma/.local/share/nvim/site/pack/packer/start/vim-easy-align",
+    url = "https://github.com/junegunn/vim-easy-align"
+  },
   ["vim-smoothie"] = {
     loaded = true,
     path = "/home/verma/.local/share/nvim/site/pack/packer/start/vim-smoothie",
