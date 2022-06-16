@@ -92,9 +92,9 @@ vim.g.maplocalleader = " "
   -- Autocomplete brackets and quotes
   map("i", "\"", "\"\"<ESC>i", opts) -- Double quotes
   map("i", "\'", "\'\'<ESC>i", opts) -- Single quotes
-  map("i", "(",  "()<ESC>i",   opts) -- Circle brackets
-  map("i", "[",  "[]<ESC>i",   opts) -- Square brackets
-  map("i", "{",  "{}<ESC>i",   opts) -- Curly brackets
+  map("i", "(", "()<ESC>i", opts) -- Circle brackets
+  map("i", "[", "[]<ESC>i", opts) -- Square brackets
+  map("i", "{", "{}<ESC>i", opts) -- Curly brackets
 
   map("n", "<leader>f", ":lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
   map("n", "<c-t>",     ":Telescope live_grep<cr>",                                                                                        opts)

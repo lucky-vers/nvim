@@ -49,6 +49,7 @@ return packer.startup(function(use)
   use "vim-airline/vim-airline-themes"   -- Themes for the status bar
   use "psliwka/vim-smoothie"             -- Vim smooth scrolling
   use "nvim-telescope/telescope.nvim"    -- Telescope
+  use "junegunn/vim-easy-align"          -- ALign objects easily
 
   -- Color Schemes
   use "morhetz/gruvbox"                  -- Gruvbox
