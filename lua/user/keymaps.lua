@@ -58,7 +58,7 @@ vim.g.maplocalleader = " "
   map("n", "<leader><leader>", "/<++><CR>ca<", opts)
 
   -- Search and Replace
-  map("n", "<leader>r", ":%s//gi<left><left><left>", opts)
+  map("n", "<leader>r", ":%s/", opts)
 
   -- Global
   map("n", "<leader>g", ":g/", opts)
@@ -106,11 +106,11 @@ vim.g.maplocalleader = " "
   map("v", ">", ">gv", opts) -- Indent right
 
   -- Add brackets and quotes to selection
-  map("v", "\"", "\"-c\"\"<ESC>\"-P", opts)
-  map("v", "\'", "\"-c\'\'<ESC>\"-P", opts)
-  map("v", "{",   "\"-c{}<ESC>\"-P",  opts)
-  map("v", "(",   "\"-c()<ESC>\"-P",  opts)
-  map("v", "[",   "\"-c[]<ESC>\"-P",  opts)
+  map("v", "\"\"", "<ESC>`>a\"<ESC>`<i\"<ESC>", opts)
+  map("v", "\'\'", "<ESC>`>a\'<ESC>`<i\'<ESC>", opts)
+  map("v", "{{",   "<ESC>`>a}<ESC>`<i{<ESC>", opts)
+  map("v", "((",   "<ESC>`>a)<ESC>`<i(<ESC>", opts)
+  map("v", "[[",   "<ESC>`>a]<ESC>`<i[<ESC>", opts)
 
   -- Move text up and down
   map("v", "<A-j>", ":m .+1<CR>==", opts)
