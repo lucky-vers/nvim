@@ -20,8 +20,3 @@ local lua_options = {
 for key, value in pairs(lua_options) do
   vim.opt[key] = value
 end
-
--- Vim Script Options
-
-vim.cmd [[set iskeyword+=-]]                         -- Detect "-" as a word
-vim.cmd [[set iskeyword+=_]]                         -- Detect "_" as a word
