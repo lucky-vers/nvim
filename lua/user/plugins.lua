@@ -49,7 +49,7 @@ return packer.startup(function(use)
   use "vim-airline/vim-airline-themes"   -- Themes for the status bar
   use "psliwka/vim-smoothie"             -- Vim smooth scrolling
   use "nvim-telescope/telescope.nvim"    -- Telescope
-  use "junegunn/vim-easy-align"          -- ALign objects easily
+  use "junegunn/vim-easy-align"          -- Align objects easily
 
   -- Color Schemes
   use "morhetz/gruvbox"                  -- Gruvbox
@@ -77,9 +77,9 @@ return packer.startup(function(use)
   use "williamboman/nvim-lsp-installer"  -- LSP Installer
 
   -- Treesitter
-  use {                                  -- Main
-  "nvim-treesitter/nvim-treesitter",     -- Treesitter
-  run = ":TSUpdate"                      -- package
+  use {                                  -- Main Treesitter package
+  "nvim-treesitter/nvim-treesitter",     -- --
+  run = ":TSUpdate"                      -- --
   }                                      -- --
   use "p00f/nvim-ts-rainbow"             -- Rainbow parentheses
 
