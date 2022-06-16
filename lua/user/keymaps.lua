@@ -81,6 +81,9 @@ vim.g.maplocalleader = " "
   map("n", "<A-j>", ":m .+1<CR>", opts)
   map("n", "<A-k>", ":m .-2<CR>", opts)
 
+  -- Start plugin EasyAlign
+  map("n", "ga", "<Plug>(EasyAlign)", opts)
+
 -- INSERT --
 
   -- Press jj fast to enter visual mode
@@ -93,8 +96,8 @@ vim.g.maplocalleader = " "
   map("i", "[",  "[]<ESC>i",   opts) -- Square brackets
   map("i", "{",  "{}<ESC>i",   opts) -- Curly brackets
 
-  map("n", "<leader>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
-  map("n", "<c-t>", "<cmd>Telescope live_grep<cr>", opts)
+  map("n", "<leader>f", ":lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
+  map("n", "<c-t>",     ":Telescope live_grep<cr>",                                                                                        opts)
 
 -- VISUAL --
 
@@ -114,14 +117,17 @@ vim.g.maplocalleader = " "
   map("v", "<A-k>", ":m .-2<CR>==", opts)
 
   -- Go to line extremes
-  map("v", "<TAB>", "0", opts)   -- Go to begining
-  map("v", "<S-TAB>", "$", opts) -- Go to end
+  map("v", "qq", "0", opts) -- Go to begining
+  map("v", "qw", "$", opts) -- Go to end
 
 -- VISUAL BLOCK --
 
   -- Move text
   map("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
   map("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
+
+  -- Start plugin EasyAlign
+  map("x", "ga", "<Plug>(EasyAlign)", opts)
 
 -- TERMINAL --
 
