@@ -20,10 +20,10 @@ vim.g.maplocalleader = " "
 -- NORMAL --
 
   -- Better window navigation
-  map("n", "<A-h>", "<C-w>h", opts) -- Move left
-  map("n", "<A-j>", "<C-w>j", opts) -- Move down
-  map("n", "<A-k>", "<C-w>k", opts) -- Move up
-  map("n", "<A-l>", "<C-w>l", opts) -- Move right
+  map("n", "<leader>h", "<C-w>h", opts) -- Move left
+  map("n", "<leader>j", "<C-w>j", opts) -- Move down
+  map("n", "<leader>k", "<C-w>k", opts) -- Move up
+  map("n", "<leader>l", "<C-w>l", opts) -- Move right
 
   -- Scroll pages
   map("n", "<C-l>", "<C-u>", opts)
