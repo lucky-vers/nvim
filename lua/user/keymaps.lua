@@ -52,7 +52,7 @@ vim.g.maplocalleader = " "
   map("n", "<S-TAB>", "$", opts) -- Go to end
 
   -- Select all text
-  map("n", "<C-a>", "ggvG2", opts)
+  map("n", "<C-a>", "ggvG$", opts)
 
   -- Move to <++>
   map("n", "<leader><leader>", "/<++><CR>ca<", opts)
