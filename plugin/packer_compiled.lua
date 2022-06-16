@@ -159,6 +159,11 @@ _G.packer_plugins = {
     path = "/home/verma/.local/share/nvim/site/pack/packer/start/popup.nvim",
     url = "https://github.com/nvim-lua/popup.nvim"
   },
+  ["telescope.nvim"] = {
+    loaded = true,
+    path = "/home/verma/.local/share/nvim/site/pack/packer/start/telescope.nvim",
+    url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
   ["tokyonight.nvim"] = {
     loaded = true,
     path = "/home/verma/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",

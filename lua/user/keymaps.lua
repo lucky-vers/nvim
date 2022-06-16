@@ -45,7 +45,7 @@ vim.g.maplocalleader = " "
   -- Save the file
   map("n",  "s", ":%s/\\s\\+$//e<CR>:w<CR>",  opts) -- Save
   map("n",  "S", ":%s/\\s\\+$//e<CR>ZZ",      opts) -- Save & Quit
-  map("n", "QQ", ":%s/\\s\\+$//e<CR>:q!<CR>", opts) -- Quit without saving
+  map("n", "<leader>x", ":%s/\\s\\+$//e<CR>:q!<CR>", opts) -- Quit without saving
 
   -- Go to line extremes
   map("n", "<TAB>", "0", opts)   -- Go to begining
@@ -62,9 +62,6 @@ vim.g.maplocalleader = " "
 
   -- Global
   map("n", "<leader>g", ":g/", opts)
-
-  -- Remove search highlight
-  map("n", "<ESC><ESC>", "/<ESC>:noh<CR>", opts)
 
   -- Increment numbers
   map("n", "=", "<C-a>", opts) -- Increase value
