@@ -89,12 +89,12 @@ vim.g.maplocalleader = " "
   -- Autocomplete brackets and quotes
   map("i", "\"", "\"\"<ESC>i", opts) -- Double quotes
   map("i", "\'", "\'\'<ESC>i", opts) -- Single quotes
-  map("i", "(", "()<ESC>i", opts) -- Circle brackets
-  map("i", "[", "[]<ESC>i", opts) -- Square brackets
-  map("i", "{", "{}<ESC>i", opts) -- Curly brackets
+  map("i", "(", "()<ESC>i",    opts) -- Circle brackets
+  map("i", "[", "[]<ESC>i",    opts) -- Square brackets
+  map("i", "{", "{}<ESC>i",    opts) -- Curly brackets
 
-  map("n", "<leader>f", ":lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
-  map("n", "<c-t>",     ":Telescope live_grep<cr>",                                                                                        opts)
+  map("n", "<leader>f", ":Telescope find_files<CR>", opts)
+  map("n", "<c-t>",     ":Telescope live_grep<CR>",  opts)
 
 -- VISUAL --
 
@@ -105,9 +105,9 @@ vim.g.maplocalleader = " "
   -- Add brackets and quotes to selection
   map("v", "\"\"", "<ESC>`>a\"<ESC>`<i\"<ESC>", opts)
   map("v", "\'\'", "<ESC>`>a\'<ESC>`<i\'<ESC>", opts)
-  map("v", "{{",   "<ESC>`>a}<ESC>`<i{<ESC>", opts)
-  map("v", "((",   "<ESC>`>a)<ESC>`<i(<ESC>", opts)
-  map("v", "[[",   "<ESC>`>a]<ESC>`<i[<ESC>", opts)
+  map("v", "{{",   "<ESC>`>a}<ESC>`<i{<ESC>",   opts)
+  map("v", "((",   "<ESC>`>a)<ESC>`<i(<ESC>",   opts)
+  map("v", "[[",   "<ESC>`>a]<ESC>`<i[<ESC>",   opts)
 
   -- Move text up and down
   map("v", "<A-j>", ":m .+1<CR>==", opts)
