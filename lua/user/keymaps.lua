@@ -81,6 +81,9 @@ vim.g.maplocalleader = " "
   -- Start plugin EasyAlign
   map("n", "ga", "<Plug>(EasyAlign)", opts)
 
+  -- Redo
+  map("n", "R", "<C-r>", opts)
+
 -- INSERT --
 
   -- Press jj fast to enter visual mode
